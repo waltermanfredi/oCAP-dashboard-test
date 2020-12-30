@@ -1,0 +1,24 @@
+
+
+
+<div class="container">
+
+  <div *ngIf="!videoNotes.notes ||  videoNotes.notes.length==0" style="
+    left: 50%;
+    position: absolute;
+    color: rgb(220,220,220);
+    transform: translate(-50%,-50%);
+    top: 50%;
+    text-align: center;
+">
+<i class="fas fa-sad-tear" style="
+    font-size: 20vw;"></i><h1>Non hai ancora video note</h1>
+    </div>
+
+
+  <div *ngFor="let videoNote of videoNotes.notes" class="card inner-main mb-4">
+    <app-video-note-item [item]="videoNote"></app-video-note-item>
+  </div>
+</div>
+   
+  

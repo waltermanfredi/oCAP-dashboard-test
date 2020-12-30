@@ -1,0 +1,39 @@
+<div class="auth-wrapper container">
+    <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h1 class="h3 mb-3 font-weight-normal text-center">Accedi</h1>
+  
+        <!-- Errors -->
+        
+        
+  
+        <!-- Login -->
+        <div *ngIf="errors?.email" class="alert alert-danger mt-3">
+            {{ errors?.email }}
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input pInputText type="email" class="form-control" formControlName="email">
+        </div>
+
+        <div *ngIf="errors?.password" class="alert alert-danger mt-3">
+            {{ errors?.password }}
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input pInputText  type="password" class="form-control" formControlName="password">
+        </div>
+        
+        <div *ngIf="errors?.error" class="alert alert-danger mt-3">
+            {{ errors?.error }}
+        </div>
+
+        <div class="form-group">
+        <button pButton pRipple type="submit" label="Accedi" class="button"></button>
+</div>
+
+        <div class="form-group">
+        <twitch-login scopes="channel:moderate+chat:edit+chat:read+user:read:email+openid+analytics:read:games+user:read:broadcast"
+        (callback)="onTwitchLogin($event)" 
+        label="Accedi con Twitch"></twitch-login></div>
+    </form>
+  </div>

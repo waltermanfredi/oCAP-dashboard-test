@@ -3,9 +3,22 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiEndPoint: "https://ocap.altervista.org",
+  pusherAppID: "49253a6891f542744b8c",
+  twitchRedirectURL: "http://127.0.0.1:4200",
+  twitchAppID: "e7xjtvtx3jr3wvhbrw082so578ptuo"
 };
 
+/*
+export const environment = {
+  production: false,
+  apiEndPoint: "http://127.0.0.1:8000",
+  pusherAppID: "49253a6891f542744b8c",
+  twitchRedirectURL: "http://127.0.0.1:4200",
+  twitchAppID: "e7xjtvtx3jr3wvhbrw082so578ptuo"
+};
+*/
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

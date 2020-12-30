@@ -1,0 +1,84 @@
+<div class="container">
+
+    <div class="card-header" style="margin-top:0px">
+        Immagine del profilo
+        <p>Descrizione</p>
+      </div>
+    <div class="card inner-main">
+      
+      <div class="card-body">
+        <div class="user-image auto-fit">
+            <img src="https://i.insider.com/5dc098e0d8d84605b9674ef9?width=1100&format=jpeg&auto=webp">
+            <button>
+                <i class="fas fa-camera"></i>
+            </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card-header" style="margin-top:0px">
+        Informazioni profilo
+        <p>Descrizione</p>
+      </div>
+    <div class="card inner-main">
+      
+      <div class="card-body">
+        <p class="card-text">Nome: <strong>{{UserProfile?.name}}</strong></p>
+        <p class="card-text">Email: <strong>{{UserProfile?.email}}</strong></p>
+      </div>
+    </div>
+
+
+    <div class="card-header">
+        Informazioni Live View
+        <p>Descrizione</p>
+        </div>
+    <div class="card inner-main">
+        
+        <div class="card-body">
+            <div class="form-group">
+                <label>URL</label>
+                <!--input type="password" class="form-control" [value]="token"-->
+                <input type="text" disabled=true class="form-control" [(ngModel)]="liveview">
+                <button class="btn" (click)="updateLiveView()">Aggiorna</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="card-header">
+        Bot Telegram
+        <p>Descrizione</p>
+        </div>
+    <div class="card inner-main">
+        
+        <div class="card-body">
+        <div class="form-group">
+            <label>Token</label>
+            <!--input type="password" class="form-control" [value]="token"-->
+            <input type="text" class="form-control" [(ngModel)]="token">
+            <button class="btn" (click)="updateToken()">Aggiorna</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="card-header">
+        <i class="fab fa-twitch"></i> Account Twitch
+        <p>Descrizione</p>
+    </div>
+    <div class="card inner-main">
+        
+        <div class="card-body" *ngIf="UserProfile?.twitch">
+            <div class="form-group">
+                <img [src]="UserProfile.twitch.profile_image_url">
+                <div class="info-panel">
+                    <label>Nome: {{UserProfile.twitch.display_name}}</label><br>
+                    <label>Email: {{UserProfile.twitch.email}}</label><br>
+                    <label>Visualizzazioni: {{UserProfile.twitch.view_count}}</label><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div>

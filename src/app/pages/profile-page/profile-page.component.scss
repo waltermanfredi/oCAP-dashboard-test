@@ -1,0 +1,23 @@
+
+
+.info-panel{
+    padding-left:50px;
+    display:inline-block;
+}
+
+.auto-fit{    position: relative;
+    display: block;
+    width: fit-content;}
+
+    .user-image button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #3399ff;
+        border-style: solid;
+        border-color: white;
+        border-radius: 100%;
+        color: white;
+        padding: 5px;
+        width: 38px;
+    }

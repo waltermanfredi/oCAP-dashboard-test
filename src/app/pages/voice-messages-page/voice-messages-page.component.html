@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div *ngIf="!audioNotes.notes ||  audioNotes.notes.length==0" style="
+  left: 50%;
+  position: absolute;
+  color: rgb(220,220,220);
+  transform: translate(-50%,-50%);
+  top: 50%;
+  text-align: center;
+">
+<i class="fas fa-sad-tear" style="
+  font-size: 20vw;"></i><h1>Non hai ancora messaggi vocali</h1>
+  </div>
+
+
+  <div *ngFor="let videoNote of audioNotes.notes" class="card inner-main mb-4">
+    <app-audio-note-item [item]="videoNote"></app-audio-note-item>
+  </div>
+</div>
