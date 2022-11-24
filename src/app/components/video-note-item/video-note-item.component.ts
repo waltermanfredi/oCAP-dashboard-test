@@ -20,7 +20,7 @@ export class VideoNoteItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.check();
-    
+    this.nothing();
   }
 
   public check(){
@@ -35,6 +35,9 @@ export class VideoNoteItemComponent implements OnInit {
         this.item.profile_pic = URL;
       });
     }
+  }
+  public nothing(){
+      console.log("Nothing happened");
   }
 
   showVideo(){
